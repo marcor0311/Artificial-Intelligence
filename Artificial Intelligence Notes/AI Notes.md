@@ -283,3 +283,131 @@ o reglas fundamentales.
 
 > [!TIP]
 > Es posible que un ambiente sea conocido, pero a la vez parcialmente observable (juego de cartas, solitario). Y un ambiente desconocido puede ser completamente observable (ver en Google Maps el mapa de un lugar al que llegas por primera vez).
+
+# Search Algorithms
+
+## Búsqueda en IA
+
+### Introducción
+
+No siempre es clara qué acción se debe tomar. Puede que sea necesario planificar considerando
+una secuencia de acciones con el objetivo de llegar a algún estado objetivo/solución.
+
+Este proceso de denominado búsqueda, y este proceso de implementa en agentes resolventes
+de problemas o agentes que resuelven problemas.
+
+Para un agente siempre será más fácil fijarse en un objetivo, que considerar la infinidad de
+opciones que ofrece su entorno para luego determinar dicho objetivo. Por lo que el agente debe:
+
+1. Formularse un objetivo. (¿Qué acciones le permiten llegar al objetivo planeado?)
+
+2. Formular el problema. (¿Qué acciones elegir?)
+
+### Entorno
+
+Hay una gran diferencia entre algoritmos informados, donde el agente es capaz de calcular y
+estimar lo lejos que está del estado objetivo, y los algoritmos no informados, donde no está
+disponible tal estimación.
+
+Si un agente tiene total información/visión del entorno, entonces este agente podrá seguir los
+siguientes pasos para la alcanzar la resolución del problema:
+
+1. Formulación del objetivo.
+
+2. Formulación del problema.
+
+3. Búsqueda.
+
+4. Ejecución.
+
+En un espacio completamente observable, determinista, entorno conocido la resolución al
+problema siempre será una secuencia fija de acciones a realizar.
+
+### Open-Closed Loop
+
+En un espacio completamente observable, determinista, entorno conocido la resolución al
+problema siempre será una secuencia fija de acciones a realizar.
+
+Si dicho sistema es capaz de ignorar sus percepciones al seguir la secuencia de secuencias y de
+igual forma alcanzar el objetivo planeado entonces se dice que es un sistema open-loop. No
+existe posibilidad de que el sistema se equivoque, siempre se llegará a la solución.
+
+En caso contrario, un acercamiento closed-loop es cuando existe una posibilidad de que el
+modelo se equivoque o que el ambiente sea no-determinista.
+
+### Open-Closed Loop (Ejemplos)
+
+Un filtrador de correos basura “spam” es un
+ejemplo de open-loop, este sistema no tomará
+en cuenta correos anteriores que se hayan
+clasificado como spam o ningún otro factor.
+Simplemente va a tomar la decisión basada en
+las características básicas del correo electrónico.
+
+Un ejemplo de closed-loop son los sistemas de
+recomendación personalizada de plataformas
+streaming. Estos sistemas van a considerar en el
+perfil y las preferencias. Además, de que estará
+en constante aprendizaje.
+
+### Problemas de búsqueda
+Un problema de búsqueda se puede definir formalmente como:
+- Un conjunto de posibles estados en el cual el entorno pueda estar. (Espacio de estados).
+- El estado inicial de un agente.
+- El conjunto de uno o varios estados objetivos.
+- El conjunto de acciones que puede realizar el agente. En donde dependiendo del estado se determinará un conjunto finito de acciones a realizar por el agente.
+- El modelo de transición, lo que describe lo que realiza cada acción. Resultado(Estado, Acción)
+- Una función de costo para cada acción. Donde se especifica el costo de realizar una acción a en un estado e para alcanzar algún estado e’. Costo(e, a, e’)
+
+Una secuencia de acciones forma un camino (path), y una solución es un camino desde el estado inicial hasta el estado objetivo.
+
+El costo de un camino es simplemente la suma individual de los costos de las acciones individuales de dicho camino.
+
+Una solución óptima es la solución con menor coste entre todas las posibles soluciones.
+
+## Algoritmos de búsqueda
+
+Un algoritmo de búsqueda toma un problema de búsqueda como entrada y retorna una solución, o una indicación de fallo/error.
+
+Se suelen usar grafos y árboles de búsqueda para representar estos algoritmos. Se forman varios caminos intentando encontrar
+uno que llegue al estado objetivo.
+
+La raíz de estos árboles es el estado inicial.
+
+No es lo mismo un árbol de búsqueda que un estado de espacios. El estado de espacios puede ser infinito, el árbol de búsqueda describe los caminos entre distintos estados para alcanzar el resultado.
+
+### Best-first search
+
+¿Cómo saber que nodo expandir?
+
+Un alcance general es el del algoritmo best-first search (BFS). En donde se elige el nodo n con el valor mínimo de una función de evaluación f(n).
+
+## Algoritmos de búsqueda No-informados
+
+### Breadth-first search (BFS ~ no informado)
+
+Los algoritmos de búsqueda no-informados se dan cuando no hay certeza sobre qué tan cerca se
+está del objetivo principal.
+
+El algoritmo Breadth-first search es apropiado cuando todas las acciones tienen el mismo costo. Quiere decir que no hay “preocupación” sobre qué nodo expandir al momento de explorar el árbol de búsqueda.
+
+### Algoritmo Dijkstra
+
+Mientras que el algoritmo Breadth-first search va revisando una profundidad a la vez, este algoritmo va explorando según el costo de cada nodo que va explorando.
+
+### Depth-first search
+
+Este algoritmo siempre expande el nodo más profundo. Este no va a priorizar una solución óptima en términos de costo. Retorna la primera solución que encuentra.
+
+## Este algoritmo siempre expande el nodo más profundo. Este no va a priorizar una solución óptima en términos de costo. Retorna la primera solución que encuentra.
+
+Las estrategias de búsqueda informada usan indicios específicos del dominio para encontrar soluciones de manera más eficiente que las estrategias no informadas.
+
+Estos indicios se presentan en la forma de una función heurística, denotada como h(n). h(n) representa el coste estimado del camino más barato desde el estado en el nodo n hasta un estado objetivo.
+
+### Algoritmos A*
+El algoritmo A* (“A estrella”) es una búsqueda best-first que usa una función de evaluación:
+
+$$ f(n) = g(n) + h(n) $$
+
+Donde \( g(n) \) es el costo del camino desde el estado inicial \( n \), y \( h(n) \) es el costo estimado del camino más corto desde \( n \) hasta el estado objetivo.
