@@ -411,3 +411,4 @@ El algoritmo A* (“A estrella”) es una búsqueda best-first que usa una funci
 $$ f(n) = g(n) + h(n) $$
 
 Donde \( g(n) \) es el costo del camino desde el estado inicial \( n \), y \( h(n) \) es el costo estimado del camino más corto desde \( n \) hasta el estado objetivo.
+
