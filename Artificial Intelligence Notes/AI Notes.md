@@ -179,4 +179,28 @@ Estas están estructuradas con neuronas artificiales conectadas entre sí. Cada 
 
 Estas neuronas pueden tener múltiples entradas y una sola salida.
 
-###
+## Agentes
+
+Un agente es cualquier cosa que puede ser vista percibiendo su ambiente a través de sensores y realizando acciones en dicho ambiente mediante
+actuadores.
+
+Un ambiente puede ser cualquier lugar, es un espacio que definamos.
+
+El término percepción hace alusión al contenido que fue “captado” por un agente a través de sus sensores. La secuencia perceptiva es el historial
+de todo lo que el agente ha percibido.
+
+Las acciones de un agente pueden depender de su conocimiento incorporado o de su secuencia perceptiva hasta el momento de realizada la acción.
+
+El comportamiento de un agente está definido por su función de agente, que asigna cada secuencia perceptiva a una determinada acción.
+
+### Agente racional
+
+Se debe evaluar el comportamiento de un agente mediante pruebas de rendimiento que evalúa cualquier secuencia de estados.
+
+Las pruebas de rendimiento es más efectivo basarse en lo que se desea lograr en el entorno en el que opera el agente, en lugar de centrarse 
+en cómo se supone que el agente debe comportarse.
+
+Se deben construir agentes que reflejen cierta incertidumbre de forma inicial sobre el rendimiento ideal que deben alcanzar y que
+lo aprendan a través del tiempo 
+
+![AI Teaches Itself to Walk](https://cdn.80.lv/api/upload/content/49/64524e233f064.jpg)
