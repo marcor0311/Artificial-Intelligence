@@ -204,3 +204,82 @@ Se deben construir agentes que reflejen cierta incertidumbre de forma inicial so
 lo aprendan a través del tiempo 
 
 ![AI Teaches Itself to Walk](https://cdn.80.lv/api/upload/content/49/64524e233f064.jpg)
+
+Un agente racional es aquel que, para cada posible secuencia perceptiva, deberá poder seleccionar una acción que se espera que maximice su rendimiento.
+
+Estos agentes dependen de:
+- Prueba de rendimiento define o mide la “inteligencia”.
+- Previo conocimiento del agente de su entorno.
+- Acciones que puede realizar el agente.
+- La secuencia perceptiva en tiempo real.
+
+### Racionalidad vs. Omnisciencia
+Un agente omnisciente es capaz de predecir la salida de sus acciones y actuar de acorde a ello.
+
+Ser racional no significa ser perfecto. La racionalidad maximiza el rendimiento esperado, la perfección maximiza
+el rendimiento actual.
+
+Un agente no debe ser diseñado de tal forma que pueda obtener información sin haberla captado previamente
+(exceptuando su conocimiento base del mismo), un agente no debe ser omnisciente.
+
+La obtención de información es parte fundamental de la
+racionalidad. Eso junto con el aprendizaje son capacidades
+fundamentales de los agentes racionales.
+
+Un agente puede tener un conocimiento base del
+entorno, pero este puede ser modificado y/o aumentado.
+
+### Autonomía
+Un agente que depende enteramente de su conocimiento previo, en lugar de su propia
+percepción y aprendizaje es un agente que carece de autonomía.
+
+Inicialmente se espera que se tenga poca o nula experiencia, y que actúe de forma
+aleatoria a no ser que sea ligeramente asistido.
+
+Después de tener suficiente experiencia en su entorno, el comportamiento de un agente
+racional puede volverse efectivamente independiente de su conocimiento previo.
+
+## Entornos de trabajo
+
+El entorno de trabajo, contexto o dominio específico en el que un agente de IA realiza sus actividades o tareas. Es el entorno en el que el agente interactúa, percibe información, toma decisiones y realiza acciones para lograr un objetivo o resolver un problema.
+Para diseñar un agente, primero se debe especificar el entorno de trabajo lo más posible.
+
+Este está compuesto de la siguiente forma (descripción PEAS):
+- **P**rueba de rendimiento.
+- **E**l ambiente.
+- los **A**ctuadores.
+- los **S**ensores.
+
+### Propiedades de un entorno de trabajo
+- Perceptibilidad (parcial o completa). Si los sensores tienen acceso de todo el estado del
+ambiente en todo momento, entonces el entorno de trabajo es completamente
+observable.
+
+- Singularidad de agentes. Entorno con un solo agentes o con varios agentes.
+
+- Naturaleza determinística. Si el siguiente estado está enteramente determinado por el
+estado actual y por la acción realizada por el/los agentes, entonces se dice que el
+ambiente es determinista.
+
+- Temporalidad (secuencial o episódico). En un entorno de tarea episódico, la
+experiencia se basa en episodios, cada episodio deriva una acción y estos son
+independientes. En el caso secuencial, una acción podría afectar a las acciones futuras.
+
+- Fluidez del entorno (estático o dinámico). ¿El entorno cambia a través del
+tiempo/acciones?
+
+- Fluidez del entorno (estático o dinámico). ¿El entorno cambia a través del
+tiempo/acciones?
+
+- Dimensionalidad del entorno (discreto o continuo). Se refiere a la naturaleza
+dimensional del entorno en términos de estados, percepciones y acciones. Un entorno
+discreto tiene un conjunto finito o contable de estados, percepciones y acciones,
+mientras que un entorno continuo permite valores infinitos y variaciones en los estados,
+percepciones y acciones.
+
+- Ocultamiento del entorno (conocido o desconocido). Se refiere al grado de
+conocimiento que el agente o diseñador tiene sobre el entorno en términos de sus leyes
+o reglas fundamentales.
+
+> [!TIP]
+> Es posible que un ambiente sea conocido, pero a la vez parcialmente observable (juego de cartas, solitario). Y un ambiente desconocido puede ser completamente observable (ver en Google Maps el mapa de un lugar al que llegas por primera vez).
