@@ -399,7 +399,7 @@ Mientras que el algoritmo Breadth-first search va revisando una profundidad a la
 
 Este algoritmo siempre expande el nodo más profundo. Este no va a priorizar una solución óptima en términos de costo. Retorna la primera solución que encuentra.
 
-## Este algoritmo siempre expande el nodo más profundo. Este no va a priorizar una solución óptima en términos de costo. Retorna la primera solución que encuentra.
+## Estrategias de búsqueda informadas
 
 Las estrategias de búsqueda informada usan indicios específicos del dominio para encontrar soluciones de manera más eficiente que las estrategias no informadas.
 
