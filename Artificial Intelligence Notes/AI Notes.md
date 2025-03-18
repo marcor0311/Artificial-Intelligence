@@ -442,5 +442,146 @@ En la teoría de la selección natural de Darwin, los tres principios fundamenta
 
 - Variación: Debe haber una variedad de rasgos presentes en la poblacion o un medio para introducir una variación.
 
-- Seleccion: Debe haber un mecanismo por el cual algunos miembros de la población puedan ser padres y transmitir su información genética y otros (supervivencia para los más aptos).
+- Selección: Debe haber un mecanismo por el cual algunos miembros de la población puedan ser padres y transmitir su información genética y otros (supervivencia para los más aptos).
 
+## Generalización
+
+1. Población inicial
+2. Función de Fitness
+3. Selección
+4. Cruce
+5. Mutación
+
+> [!NOTE]  
+> ⚠️ **Cuidado con la Selección de Individuos en Especial para el Cruce y la Mutación**  
+> En algoritmos genéticos, una mala selección de individuos puede afectar el rendimiento del algoritmo, generando problemas como convergencia prematura, falta de exploración y ruido por mutaciones excesivas.
+
+### Población inicial
+
+- El proceso comienza con: Un conjunto de individuos que se denomina Población. Cada individuo es una solución al problema que quiere resolver.
+
+- Un individuo se caracteriza: Por un conjunto de parámetros (variables) conocidos como Genes. Los genes se unen en una cadena para formar un cromosoma (solución).
+
+- En un algoritmo genético: El conjunto de genes de un individuo se representa mediante una cadena, en términos de un alfabeto. Un individuo se caracteriza Por un conjunto de parámetros (variables) conocidos como Genes. Los genes se unen en una cadena para formar un cromosoma (solución).
+
+- Por lo general, Se utilizan valores binarios (cadena de 1 y 0). Decimos que codificamos los genes en un cromosoma.
+
+## Función Fitness
+
+Consiste en definir una función que nos mida qué tan bueno es cada individuo en relación a los demás
+
+## Descendencia
+
+- 01 Selección: Seleccionar cromosomas de acuerdo a F(x).
+
+- 02 Cruzamiento: Cruzar cromosomas con alguna posibilidad de cruzamiento, sino la descendencia es la copia exacta de los padres.
+
+- 03 Mutación: Mutar la descendencia en alguna de sus características.
+
+- 04 Aceptación: Localizar la nueva descendencia de la población.
+
+# Pseudocódigo
+
+```plaintext
+START
+  Generate the initial population
+  Compute fitness
+  REPEAT
+    Selection
+    Crossover
+    Mutation
+    Compute fitness
+  UNTIL population has converged
+STOP
+```
+
+# EJEMPLO ULTRA SENCILLO
+Encontrar el número más cercano a 10 entre 0 y 7.
+
+Cromosomas posibles:
+000 = 0
+001 = 1
+010 = 2
+011 = 3
+100 = 4
+101 = 5
+110 = 6
+111 = 7
+
+# 📌 EJEMPLO
+
+## 🔹 Población inicial:
+| Cromosoma | Valor |
+|-----------|-------|
+| 010       | 2     |
+| 011       | 3     |
+| 110       | 6     |
+
+## 📊 Evaluar:
+| Cromosoma | Valor | Rank Función Fitness |
+|-----------|-------|---------------------|
+| 010       | 2     | 3                   |
+| 011       | 3     | 2                   |
+| 110       | 6     | 1                   |
+
+---
+
+## 🔹 Nueva población:
+| Cromosoma | Valor |
+|-----------|-------|
+| 011       | 3     |
+| 110       | 6     |
+| 111       | 7     |
+
+## 📊 Evaluar:
+| Cromosoma | Valor | Rank Función Fitness |
+|-----------|-------|---------------------|
+| 011       | 3     | 3                   |
+| 110       | 6     | 2                   |
+| 111       | 7     | 1                   |
+
+## 📝 Explicación de la solución
+
+Este ejemplo muestra el proceso de evolución en un **algoritmo genético** mediante selección, cruce y mutación:
+
+1. **Población inicial:**  
+   Se comienza con una población de **tres cromosomas** (010, 011, 110), cada uno con un valor asociado.
+
+2. **Evaluación:**  
+   Se calcula la **función fitness**, que asigna un **ranking** a cada cromosoma basado en su valor.
+
+3. **Generación de nueva población:**  
+   - Se seleccionan los mejores individuos de la generación anterior según la función fitness.
+   - Se realiza **cruce** y posiblemente **mutación** para generar nuevos cromosomas.
+   - Aparece un nuevo individuo (111) que no estaba en la población inicial.
+
+4. **Evaluación de la nueva población:**  
+   Se vuelve a calcular la función fitness para la nueva población, y el proceso puede repetirse hasta la **convergencia**.
+
+# 📌 Aplicaciones de Algoritmos Genéticos (AG)
+
+## 🔊 Acústica
+- Distinguir entre reflejos de sonar y diferentes tipos de objetos.
+- Diseñar sistemas activos de control de ruido que anulen el sonido no deseado mediante la producción de ondas de sonido que interfieran destructivamente con el ruido no deseado.
+
+## ✈️ Ingeniería Aeroespacial
+- Diseñar aeronaves **supersónicas** minimizando:
+  - La resistencia aerodinámica a velocidades de crucero supersónicas.
+  - La resistencia a velocidades subsónicas.
+  - La carga aerodinámica.
+
+## 📈 Mercados Financieros
+- Predecir el rendimiento futuro de las acciones que cotizan en bolsa.
+
+## 🌍 Geofísica
+- Localizar **hipocentros de terremotos** en base a datos sismológicos.
+
+## 🏗️ Ingeniería de Materiales
+- Diseñar polímeros conductores de electricidad a base de **carbono** conocidos como **polianilinas**.
+- Diseñar patrones de exposición para un **haz de litografía de electrones**.
+
+## 📡 Enrutamiento y Programación
+- Encontrar **rutas de enrutamiento óptimas** en redes de telecomunicaciones utilizadas para transmitir datos del remitente a los destinatarios.
+
+## ⚙️ Ingeniería de Sistemas
+- Resolver problemas de **diseño multiobjetivo**, como la optimización de **aerogeneradores** para la generación de energía eléctrica.
