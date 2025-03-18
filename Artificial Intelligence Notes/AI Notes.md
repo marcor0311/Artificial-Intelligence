@@ -10,6 +10,8 @@ They serve as a structured reference to understand fundamental AI topics to cons
 # Index  
 1. **Introduction to Artificial Intelligence**  
 2. **Search Algorithms**
+3. **Genetic Algorithms**
+
 
 # Introduction to Artificial Intelligence 
 
@@ -412,3 +414,18 @@ $$ f(n) = g(n) + h(n) $$
 
 Donde \( g(n) \) es el costo del camino desde el estado inicial \( n \), y \( h(n) \) es el costo estimado del camino más corto desde \( n \) hasta el estado objetivo.
 
+# Genetic Algorithms
+
+## Un algortimo genético (AG)
+
+Es una técnica de optimización y búsqueda basada en la teoría de la evolución biológica. 
+
+## Qué son los AG?
+
+Es una clase de algoritmos que se inspiran en la teoría de la evolución natural de Darwin
+
+El objetivo es reflejar; el proceso natural de selección donde los individuos más aptos son seleccionados para reproducirse y mejorar la especie en cada evolución 
+
+Ejemplo:
+
+![Ejemplo de Algoritmos Genéticos](https://hawaiireedlab.com/wpress/wp-content/uploads/2016/05/lamarck_giraffe2.jpg)
