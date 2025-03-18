@@ -429,3 +429,18 @@ El objetivo es reflejar; el proceso natural de selección donde los individuos m
 Ejemplo:
 
 ![Ejemplo de Algoritmos Genéticos](https://hawaiireedlab.com/wpress/wp-content/uploads/2016/05/lamarck_giraffe2.jpg)
+
+## Proceso
+
+Es una buena solución, especialmente con información incompleta o imperfecta, o incluso con capacidad computacional limitada.
+
+En la teoría de la selección natural de Darwin, los tres principios fundamentales necesarios para que ocurra la evolución.
+
+## Principios fundamentales necesrios para la evolución 
+
+- Herencia: Debe existir un proceso por el cual los hijos reciban la propiedad de sus padres.
+
+- Variación: Debe haber una variedad de rasgos presentes en la poblacion o un medio para introducir una variación.
+
+- Seleccion: Debe haber un mecanismo por el cual algunos miembros de la población puedan ser padres y transmitir su información genética y otros (supervivencia para los más aptos).
+
